@@ -15,16 +15,16 @@
 ## 二、快速开始
 
 ### 安装依赖
-```bash
+bash
 sudo apt install ros-humble-nav2-bringup ros-humble-cartographer-ros \
   ros-humble-rtabmap-ros ros-humble-twist-mux
 
 ### 编译
 cd ~/ros2_ws
-colcon build --symlink-install
-source install/setup.bash
+  colcon build --symlink-install
+  source install/setup.bash
 
-###启动仿真
+### 启动仿真
 ros2 launch robot_gazebo gazebo_sim.launch.py
 ros2 launch robot_navigation nav2_simple.launch.py map:=~/ros2_ws/maps/my_map.yaml
 
@@ -39,7 +39,7 @@ ros2 launch robot_navigation nav2_simple.launch.py map:=~/ros2_ws/maps/my_map.ya
 
 ### 安装系统依赖
 
-```bash
+bash
 sudo apt update
 sudo apt install -y \
   ros-humble-desktop \
@@ -53,16 +53,16 @@ sudo apt install -y \
   ros-humble-teleop-twist-keyboard \
   ros-humble-xacro \
   python3-colcon-common-extensions
-四、项目构建
-# 1. 克隆仓库
+## 四、项目构建
+### 1. 克隆仓库
 cd ~
 git clone https://github.com/yourname/robot-vision-navigation.git ros2_ws
 cd ros2_ws
 
-# 2. 编译
+### 2. 编译
 colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
 
-# 3. 加载环境
+### 3. 加载环境
 source install/setup.bash
 # 建议添加到 ~/.bashrc
 echo "source ~/ros2_ws/install/setup.bash" >> ~/.bashrc
