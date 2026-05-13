@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>robot_navigation</name>
+  <version>0.0.1</version>
+  <description>Nav2 navigation stack configuration</description>
+  <maintainer email="user@todo.todo">user</maintainer>
+  <license>MIT</license>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>nav2_bringup</depend>
+  <depend>nav2_simple_commander</depend>
+  <depend>twist_mux</depend>
+  <depend>teleop_twist_keyboard</depend>
+  <depend>robot_description</depend>
+  <export><build_type>ament_cmake</build_type></export>
+</package>

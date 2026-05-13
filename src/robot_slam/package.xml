@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>robot_slam</name>
+  <version>0.0.1</version>
+  <description>2D/3D SLAM configurations</description>
+  <maintainer email="user@todo.todo">user</maintainer>
+  <license>MIT</license>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>cartographer_ros</depend>
+  <depend>slam_toolbox</depend>
+  <depend>rtabmap_ros</depend>
+  <depend>robot_description</depend>
+  <export><build_type>ament_cmake</build_type></export>
+</package>
