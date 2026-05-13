@@ -34,7 +34,7 @@ ros2 launch robot_navigation nav2_simple.launch.py map:=~/ros2_ws/maps/my_map.ya
 
 - **OS**: Ubuntu 22.04 LTS
 - **ROS2**: Humble Hawksbill
-- **IDE**: VSCode（推荐）
+- **IDE**: VSCode
 - **Gazebo**: Gazebo Classic 11.10.2
 
 ### 安装系统依赖
@@ -54,17 +54,26 @@ sudo apt install -y \
   ros-humble-xacro \
   python3-colcon-common-extensions
 ## 四、项目构建
-### 1. 克隆仓库
-cd ~
-git clone https://github.com/yourname/robot-vision-navigation.git ros2_ws
-cd ros2_ws
 
-### 2. 编译
+
+### 1. 编译
 colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
 
-### 3. 加载环境
+### 2. 加载环境
 source install/setup.bash
-# 建议添加到 ~/.bashrc
+#### 建议添加到 ~/.bashrc
 echo "source ~/ros2_ws/install/setup.bash" >> ~/.bashrc
 source ~/ros2_ws/install/setup.bash
 ros2 launch robot_gazebo gazebo_sim.launch.py
+
+## 五、快速开始
+### 1、一键启动仿真环境（终端1）
+source ~/ros2_ws/install/setup.bash
+ros2 launch robot_gazebo gazebo_sim.launch.py
+### 2、建图
+source ~/ros2_ws/install/setup.bash
+ros2 launch robot_gazebo gazebo_sim.launch.py
+#### 终端 2：source ~/ros2_ws/install/setup.bash
+ros2 launch robot_slam cartographer_2d.launch.py
+#### 终端 3：（启用遥控）
+ros2 run teleop_twist_keyboard teleop_twist_keyboard
