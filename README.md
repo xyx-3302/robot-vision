@@ -18,3 +18,12 @@
 ```bash
 sudo apt install ros-humble-nav2-bringup ros-humble-cartographer-ros \
   ros-humble-rtabmap-ros ros-humble-twist-mux
+
+### 编译
+cd ~/ros2_ws
+colcon build --symlink-install
+source install/setup.bash
+
+###启动仿真
+ros2 launch robot_gazebo gazebo_sim.launch.py
+ros2 launch robot_navigation nav2_simple.launch.py map:=~/ros2_ws/maps/my_map.yaml
